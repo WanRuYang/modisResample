@@ -11,7 +11,7 @@ for f in fs:
 	#	outfile + "_sur_refl_b02.tif" not in os.listdir(os.getcwd()):
 	com = 'modis_convert.py -s "( 1 1 1 1 )" -o ' + outfile + ' -e 3310 '+ f
 	print com 
-	subprocess.Popen('modis_convert.py -s "( 1 1 0 0 )" -o ' + outfile + ' -e 3310 '+ f, shell=True).wait()
+	subprocess.Popen('modis_convert.py -s "( 1 1 0 0 )" -o ' + outfile + ' -e 3310 -g 250 '+ f, shell=True).wait()
 
 #clip modis image using state polygone
 inshp =  '../shp/cnty24k09_1_state_poly.shp'

@@ -1,0 +1,26 @@
+"""example expression of modis QA band"""
+250 m level 3 surface reflectance band quality description 
+bit 0 is LSB (
+https://lpdaac.usgs.gov/sites/default/files/public/modis/docs/MODIS_LP_QA_Tutorial-3.pdf
+)
+
+1) use python to format the value to bitword
+
+"{0:016b}".format(the_int__pixel_value)
+
+2) bit-string meaning:
+   eg. 4096
+   
+    G|F|E| D  |  C | B|A
+   00|0|1|0000|0000|00|00
+   
+   atmospheric corretion performatted, good quality 
+
+ 
+   e.g 7425
+   corrected bands
+   
+   
+
+
+
